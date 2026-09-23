@@ -52,4 +52,4 @@ Gene-to-cell-type interpretation was done with help from Claude (Anthropic); all
 
 ## Live demo
 
-Live demo: <tunnel URL, if currently running>
+Live demo: <tunnel URL: https://rights-classic-air-checkout.trycloudflare.com/, if currently running>
