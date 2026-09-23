@@ -1,0 +1,12 @@
+pbmc3k.h5ad — single-cell RNA-seq of 2,700 human PBMCs (blood immune cells), already processed.
+
+Open in Python:  import scanpy as sc;  ad = sc.read_h5ad("pbmc3k.h5ad")
+  ad.X               log-normalised expression, all 13,714 genes (colour plots by this)
+  ad.layers["counts"] raw UMI counts (pre-normalisation)
+  ad.var_names       gene symbols (e.g. CD3D, MS4A1, LYZ, PPBP)
+  ad.obs["leiden"]   cluster label per cell: a NUMBER ("0".."7"), not a name — identifying each is the job
+  ad.obs["n_genes"], ad.obs["total_counts"], ad.obs["pct_mito"]   per-cell quality
+  ad.obsm["X_umap"]  2-D map coordinates (similar cells sit together; a picture, not a measurement)
+
+Clusters and the map are already computed — you do not need to recompute them. Tip: rank each
+cluster's top genes (sc.tl.rank_genes_groups) to see what defines it.
